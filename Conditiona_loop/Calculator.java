@@ -25,25 +25,27 @@ public class Calculator {
 
                     int ans = 0;
 
-                    if (op == '+') {
-                        ans = num1 + num2;
-                    } else if (op == '-') {
-                        ans = num1 - num2;
-                    } else if (op == '*') {
-                        ans = num1 * num2;
-                    } else if (op == '/') {
-                        if (num2 != 0) {
-                            ans = num1 / num2;
-                        } else {
-                            System.out.println("Cannot divide by zero.");
-                            continue;
+                    switch (op) {
+                        case '+' -> ans = num1 + num2;
+                        case '-' -> ans = num1 - num2;
+                        case '*' -> ans = num1 * num2;
+                        case '/' -> {
+                            if (num2 != 0) {
+                                ans = num1 / num2;
+                            } else {
+                                System.out.println("Cannot divide by zero.");
+                                continue;
+                            }
                         }
-                    } else if (op == '%') {
-                        if (num2 != 0) {
-                            ans = num1 % num2;
-                        } else {
-                            System.out.println("Cannot find remainder with zero.");
-                            continue;
+                        case '%' -> {
+                            if (num2 != 0) {
+                                ans = num1 % num2;
+                            } else {
+                                System.out.println("Cannot find remainder with zero.");
+                                continue;
+                            }
+                        }
+                        default -> {
                         }
                     }
 
