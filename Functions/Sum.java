@@ -2,10 +2,11 @@ import java.util.Scanner;
 
 public class Sum {
     public static void main(String[] args) {
-        sum();
+        int ans = sum1();
+        System.out.println(ans);
     }
 
-     static void sum() {
+    static int sum1() {
         //Q: take input of 2 numbers and print the sum
         try(Scanner in = new Scanner(System.in)){
 
@@ -15,8 +16,7 @@ public class Sum {
             int num2 = in.nextInt();
 
             int sum = num1 + num2;
-            System.out.println("The sum = " + sum);
-            in.close();
+            return sum;
         }
     }
 }
