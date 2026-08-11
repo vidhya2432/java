@@ -5,7 +5,6 @@ public class Sum {
         int ans = sum1();
         System.out.println(ans);
     }
-
     static int sum1() {
         //Q: take input of 2 numbers and print the sum
         try(Scanner in = new Scanner(System.in)){
