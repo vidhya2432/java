@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Fibo {
     public static void main(String[] args){
         try(Scanner in = new Scanner(System.in)){
+            System.out.println("Enter a number:");
             int n = in.nextInt(); 
             int p = 0;
             int i = 1;
